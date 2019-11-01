@@ -1,11 +1,11 @@
 import React, { Component} from 'react';
 import './App.css';
 
-const toutesLesLettres = [
+const TOUTES_LES_LETTRES = [
   'A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ];
 
-const phrases = [
+const PHRASES = [
   'CHAT',
   'MAISON',
   'CHUCK NORRIS'
@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   genererPhrase() {
-    return phrases[Math.floor(Math.random() * phrases.length)]
+    return PHRASES[Math.floor(Math.random() * PHRASES.length)]
   }
 
   verifier(lettre) {
@@ -77,7 +77,7 @@ class App extends Component {
             ? <button className="App-buttonRejouer" onClick={() => this.rejouer()}>
                 Rejouer
               </button>
-            : toutesLesLettres.map((lettre, index) => (
+            : TOUTES_LES_LETTRES.map((lettre, index) => (
               <span key={index}>
               {
                 lettresTrouves.includes(lettre)
